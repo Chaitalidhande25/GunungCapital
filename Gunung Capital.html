@@ -24,12 +24,11 @@
 
   .logo-container {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 
   .logo-container img {
-    max-height: 120px; /* increased logo size */
-    width: auto;
+    max-height: 90px;
   }
 
   h1 {
@@ -69,7 +68,6 @@
   }
 
   select {
-    background-color: #fff;
     appearance: none;
     background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23666' d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
@@ -107,63 +105,65 @@
 
 <div class="page-container">
 
+  <!-- LOGO -->
   <div class="logo-container">
-    <img src="https://va1767334714252.my.salesforce.com/sfc/dist/version/download/?oid=00DKj00000pTxrb&ids=068Kj00000bTIUrIAO&d=/a/Kj000003695F/oVBwXJh1a7xHAyR3INa6BqQlzK5F.hvhdad9swa8Jy0&operationContext=DELIVERY&viewId=05HKj000000sJ4oMAE&dpt=" alt="Gunung Capital Logo">
+    <img src="https://va1767334714252.my.salesforce.com/sfc/dist/version/download/?oid=00DKj00000pTxrb&ids=068Kj00000bTIUrIAO&d=/a/Kj000003695F/oVBwXJh1a7xHAyR3INa6BqQlzK5F.hvhdad9swa8Jy0&operationContext=DELIVERY&viewId=05HKj000000sJ4oMAE&dpt="
+         alt="Gunung Capital Logo">
   </div>
 
   <h1>Contact Gunung Capital Support</h1>
 
-  <form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00DKj00000pTxrb" method="POST">
+  <form
+    action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00DKj00000pTxrb"
+    method="POST">
 
-    <!-- Redirect after submit -->
-    <input type="hidden" name="retURL" value="http://google.com">
+    <!-- ✅ REDIRECT TO THANK YOU PAGE -->
+    <input type="hidden" name="retURL"
+           value="https://chaitalidhande25.github.io/ThankYou/gunung%20thank%20you.html">
 
     <!-- Salesforce Hidden Fields -->
     <input type="hidden" name="orgid" value="00DKj00000pTxrb">
-    <input type="hidden" id="external" name="external" value="1">
+    <input type="hidden" name="external" value="1">
     <input type="hidden" name="origin" value="Web">
     <input type="hidden" name="Status" value="New">
 
     <div class="form-group">
-      <label for="name">Contact Name</label>
-      <input id="name" name="name" type="text" maxlength="80" placeholder="Your full name" required>
+      <label>Contact Name</label>
+      <input name="name" type="text" required>
     </div>
 
     <div class="form-group">
-      <label for="email">Email</label>
-      <input id="email" name="email" type="email" maxlength="80" placeholder="you@example.com" required>
+      <label>Email</label>
+      <input name="email" type="email" required>
     </div>
 
     <div class="form-group">
-      <label for="phone">Phone</label>
-      <input id="phone" name="phone" type="text" maxlength="40" placeholder="+91 98765 43210">
+      <label>Phone</label>
+      <input name="phone" type="text">
     </div>
 
     <div class="form-group">
-      <label for="00NKa00000fikTT">Order Number</label>
-      <input id="00NKa00000fikTT" name="00NKa00000fikTT" type="text" maxlength="255" placeholder="Enter your order number">
+      <label>Order Number</label>
+      <input name="00NKa00000fikTT" type="text">
     </div>
 
     <div class="form-group">
-      <label for="subject">Subject</label>
-      <input id="subject" name="subject" type="text" maxlength="80" placeholder="Brief issue summary" required>
+      <label>Subject</label>
+      <input name="subject" type="text" required>
     </div>
 
     <div class="form-group">
-      <label for="reason">Case Reason</label>
-      <select id="reason" name="reason">
+      <label>Case Reason</label>
+      <select name="reason">
         <option value="">-- Select Reason --</option>
-        <option value="User didn't attend training">User didn't attend training</option>
-        <option value="Complex functionality">Complex functionality</option>
         <option value="Existing problem">Existing problem</option>
-        <option value="Instructions not clear">Instructions not clear</option>
         <option value="New problem">New problem</option>
       </select>
     </div>
 
     <div class="form-group">
-      <label for="priority">Priority</label>
-      <select id="priority" name="priority">
+      <label>Priority</label>
+      <select name="priority">
         <option value="">-- Select Priority --</option>
         <option value="Critical">Critical</option>
         <option value="High">High</option>
@@ -173,11 +173,13 @@
     </div>
 
     <div class="form-group">
-      <label for="description">Description</label>
-      <textarea id="description" name="description" placeholder="Describe your issue in detail"></textarea>
+      <label>Description</label>
+      <textarea name="description"></textarea>
     </div>
 
-    <button type="submit" class="submit-btn">Submit Case</button>
+    <button type="submit" class="submit-btn">
+      Submit Case
+    </button>
 
   </form>
 
